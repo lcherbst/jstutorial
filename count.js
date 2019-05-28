@@ -16,6 +16,18 @@ But bears it out even to the edge of doom.
 var uniques = new Map();
 let words = sonnet.match(/\w+/g);
 
+
+words.forEach(function(word) {
+  if (uniques.has(word)) {
+    let val = uniques.get(word);
+    val += 1;
+    uniques.set(word, val);
+  } else {
+    uniques.set(word, 1);
+  }
+} )
+
+/*
 for (let i = 0; i < words.length; i++) {
   let word = words[i];
   if (uniques.has(word)) {
@@ -26,6 +38,7 @@ for (let i = 0; i < words.length; i++) {
     uniques.set(word, 1);
   }
 }
+*/
 
 console.log("Running print loop")
 for (var [key, value] of uniques.entries()) {
