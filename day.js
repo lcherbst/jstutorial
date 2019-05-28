@@ -5,5 +5,5 @@ function dayName(date) {
 }
 
 function greeting(date) {
-  return `Hello, world! Happy ${dayName(now)}.`
+  return `Hello, world! Happy ${dayName(date)}.`
 }
