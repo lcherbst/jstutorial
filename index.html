@@ -9,10 +9,19 @@
     let now = new Date();
     alert(greeting(now));
 
+function TransferOut(destination, destUrl) {
+    alert("Notice: You are leaving the Marion County Property Appraiser web site \nand will be redirected to: " + destination);
+    open(destUrl, '_blank');
+}
+
+
   </script>
 </head>
 <body>
   <h1>Hello, world!</h1>
   <p>This page includes an alert written in JavaScript - Version 4.</p>
+
+  <a href="javascript:TransferOut('Google Street View','https://www.google.com/maps/place/3718+NE+4th ST+Ocala+FL');" >
+    GOOGLE Street View</a>
 </body>
 </html>
